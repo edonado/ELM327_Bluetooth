@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Bluetooth_Chat_ELM327"
+    tools:showIn="@layout/content_bluetooth__chat__elm327">
+
+    <Button
+        android:id="@+id/listen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Listen" />
+
+    <Button
+        android:id="@+id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginLeft="108dp"
+        android:text="List"
+        app:layout_constraintLeft_toLeftOf="@+id/listen"
+        app:layout_constraintTop_toTopOf="@+id/listen" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginLeft="32dp"
+        android:text="Status"
+        app:layout_constraintBaseline_toBaselineOf="@+id/list"
+        app:layout_constraintLeft_toRightOf="@+id/list" />
+
+    <ListView
+        android:id="@+id/chat"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        app:layout_constraintTop_toBottomOf="@+id/list"
+        tools:layout_editor_absoluteX="42dp">
+
+    </ListView>
+
+    <EditText
+        android:id="@+id/command"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="460dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintRight_toLeftOf="@+id/send"
+        app:layout_constraintTop_toBottomOf="@+id/list" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="476dp"
+        android:text="Send"
+        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/list"
+        app:layout_constraintTop_toBottomOf="@+id/status" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginBottom="40dp"
+        android:text="Type Car ID"
+        app:layout_constraintBottom_toBottomOf="@+id/command"
+        app:layout_constraintBottom_toTopOf="@+id/command"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.289"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/Car_Number"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="100dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/send"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tVVel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="190dp"
+        android:layout_marginRight="50dp"
+        android:text="Vel: "
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintRight_toLeftOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/VELTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="190dp"
+        android:text="1000"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintRight_toLeftOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="190dp"
+        android:layout_marginLeft="10dp"
+        android:text="km/h"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintLeft_toRightOf="@+id/VELTxt" />
+
+    <TextView
+        android:id="@+id/latT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="160dp"
+        android:layout_marginRight="50dp"
+        android:text="Lat: "
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintRight_toLeftOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/TLAT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="160dp"
+        android:text="1000"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintLeft_toRightOf="@+id/VELTxt" />
+
+    <TextView
+        android:id="@+id/lngT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
+        android:layout_marginRight="50dp"
+        android:text="Lng: "
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintRight_toLeftOf="@+id/textView2" />
+
+
+    <TextView
+        android:id="@+id/TLNG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
+        android:text="1000"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintLeft_toRightOf="@+id/VELTxt" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:text="Ready to Send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/units"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

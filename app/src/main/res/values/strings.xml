@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ELM327_Bluetooth_Connector</string>
+    <string name="action_settings">Settings</string>
+</resources>
